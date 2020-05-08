@@ -1,0 +1,126 @@
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <div class="container">
+            <div class="row header">
+            <div class="col-sm-12 col-md-6 p-4 head-text">
+            <div class="Intro">
+            Looking for a 
+            lollipop alternative?
+            </div>
+            <div class="intro-1">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </div>
+            <div class="row buttons">
+                <button data-toggle="tooltip" type="button" class="col btn btn-primary btn1" (click)="redirect()" >Primary CTA</button>
+                <button data-toggle="tooltip" type="button" class=" col btn btn-outline-primary btn2" (click)="redirect()">Secondary CTA</button>
+    
+            </div>
+            
+        </div>
+        <div class="col-sm-12 col-md-6 p-5 pic rounded floate-left">
+            <img class="ig" src="./assets/images/site-img1.png">
+        </div>
+    </div>
+    <div class="row row-2">
+        <div class="jumbotron jumbotron-fluid" style="height: 415px; width: 1267px; border-radius: 5px;">
+          <h2 class="row-2-heading">This is a heading in <br>two lines</h2>
+          <img src="./assets/images/row2.png" alt="Content" class="mx-auto d-block img-fluid">
+        </div>
+      </div>
+        </div>
+      <div class="container-fluid">
+
+        <div class="row row-3">
+            <p class="row-3-heading">Compare pricing today!</p><br>
+            <p class="row-3-content1">Lorem Ipsum is simply dummy text of the printing and <span style="color: dodgerblue;">typesetting</span>.</p>
+  
+            <div class="row-3-content2 text-center">
+              <button *ngFor="let serve of servings;let i = index" [attr.data-index]="i" [ngClass]="{'active' : isValue == i }" data-placement="top" type="button" class="btn btn-light" (click)="servingselected(i)">{{serve}} Serving</button>
+            </div>
+            <div class="row-3-content3 text-center">
+              <form>
+                <div >
+                  <label class="label-annual">Annual<label class="annual">50% off</label></label>
+                  <label class="switch">
+                    <input type="checkbox" (change)="istoggled($event)" [value]="1">
+                    <span class="slider round"></span>
+                  </label>
+                  <label class="label-month">Monthly<br><span class="annual-monthly">-</span></label>
+                  
+                </div>
+              </form>
+            </div>
+        </div>  
+        <div class="row row-4 text-center">
+            <div class="card-group">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">lollipop</h4>
+                  <p class="card-text"><h3 class="actual-price"><b>$</b>{{lollipopPrice}} <span class="price" >Per {{packageselected[value]}}</span></h3>
+    
+
+                  <p class="card-text">For {{noservings}}  serving</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body ">
+                  <h4 class="card-title">Icecandy</h4>
+                  <p class="card-text"><h3 class="actual-price"><b>$</b>{{icecandyPrice}} <span class="price">Per {{packageselected[value]}}</span></h3>
+                    <p class="card-text">For {{noservings}}  serving</p>
+
+                </div>
+              </div>
+              <div class="card selected-card">
+                <div class="select-actual-price card-body ">
+                  <h4 class="card-title">Your savings with lollipop</h4>
+                  <p class="card-text select-card"><b>$</b>{{savings}}<span class="price"><br> Per {{packageselected[value]}}</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row  row-5">
+            <h3 class="text-center reviews">Here’s what our customers have to say</h3>
+            <div id="carouselExampleIndicators" class="carousel slide carou" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"  ></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"  ></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"  ></li>
+
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block" src="./assets/images/Capture.PNG" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block" src="./assets/images/Capture.PNG" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block" src="./assets/images/Capture.PNG" alt="Third slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block" src="./assets/images/Capture.PNG" alt="Fourth slide">
+                  </div>
+                </div>
+              </div>
+        </div>
+
+          <div class="row row-6 ">
+            <div class="col-2 foot">
+              <h4 class="headings">Loved by users, <br>recommended by experts</h4>
+              <p class="foot-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+              <button data-toggle="tooltip" title="Primary CTA" data-placement="bottom" type="button" name="Primary CTA" class="btn btn-primary btn-block foot-but" (click)="redirect()">Primary CTA</button>
+            </div>
+            <div class="col-4 lugg">
+              <img src="./assets/images/Group 4.png">
+            </div>
+          </div>
+       
