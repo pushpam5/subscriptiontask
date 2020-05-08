@@ -129,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "subscription-tasks"
+    }
+  },
+  "defaultProject": "subscription-tasks",
+  "cli": {
+    "analytics": false
+  }
 }
